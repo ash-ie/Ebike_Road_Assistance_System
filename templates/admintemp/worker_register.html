@@ -4,8 +4,9 @@
 <div class="card">
     <div class="card-body">
         <h3 class="card-title">Worker Register Form</h3>
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
+            {{ u_form|crispy }}
             {{ form|crispy }}
             <button type="submit" class="btn btn-primary">Register</button>
         </form>

@@ -64,7 +64,7 @@
             <div class="card-body">
               <!-- Logo -->
               <div class="app-brand justify-content-center">
-                <a href="index.html" class="app-brand-link gap-2">
+                <a href="{% url 'index' %}" class="app-brand-link gap-2">
                   <h4 style="color: rgb(126, 247, 5);font-weight: bold;">
                     <i>CROSS ROADS</i>
                   </h4>
@@ -82,7 +82,7 @@
 
               <p class="text-center">
                 <span>Already have an account?</span>
-                <a href="auth-login-basic.html">
+                <a href="{% url 'sign-in' %}">
                   <span class="text-success">Sign in instead</span>
                 </a>
               </p>

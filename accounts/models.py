@@ -71,3 +71,4 @@ class UserProfile(BaseModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length = 25,blank=True, null=True)
     mobile_number = models.CharField(max_length=25,unique=True, null=True)
+    profile_pic= models.ImageField(upload_to='MechanicProfilePic/',null=True,blank=True)

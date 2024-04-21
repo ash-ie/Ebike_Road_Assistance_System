@@ -68,7 +68,7 @@ def worker_register(request):
             customer = form.save(commit=False)
             customer.user = user
             customer.save()
-            return redirect('workers') 
+            return redirect('workers-admin') 
     else:
         form = WorkerRegistrationForm()
         u_form = UserRegistrationForm()
@@ -110,3 +110,8 @@ def approve_request(request,pk):
 def customer_invoice(request):
     enquiry=Request.objects.all().exclude(status='Pending')
     return render(request,'admintemp/customer_invoice.html',{'enquiry':enquiry})
+
+def view_feedback_admin(request):
+    data = Feedback.objects.all()
+    context = {'data':data}
+    return render(request, 'admintemp/feedback.html', context)

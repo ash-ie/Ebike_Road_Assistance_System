@@ -14,6 +14,7 @@
                     <th scope="col">Model</th>
                     <th scope="col">Brand</th>
                     <th scope="col">Problem Description</th>
+                    <th scope="col">Location</th>
                     <th scope="col">Status</th>
                     <th scope="col">Update Status</th>
                 </tr>
@@ -28,6 +29,7 @@
                     <td> {{w.vehicle_model}}</td>
                     <td> {{w.vehicle_brand}}</td>
                     <td> {{w.problem_description}}</td>
+                    <td> {{w.location}}</td>
                     <td>{{w.status}}</td>
                     <td><a style="color:blue; text-decoration:none;font-size:25px;"
                             href="{% url 'update-work-status' w.id  %}">&#9998;</a></td>

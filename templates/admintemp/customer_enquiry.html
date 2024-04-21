@@ -12,6 +12,7 @@
                     <th scope="col">Vehicle No.</th>
                     <th>Enquiry Date</th>
                     <th scope="col">Issues</th>
+                    <th scope="col">Location</th>
                     <th scope="col">Status</th>
                     <th scope="col">Approve/Reject</th>
                 </tr>
@@ -24,6 +25,7 @@
                     <td> {{i.vehicle_no}}</td>
                     <td>{{i.date}}</td>
                     <td>{{i.problem_description}}</td>
+                    <td>{{i.location}}</td>
                     <td>{{i.status}}</td>
                     <td><a  style="color:red; text-decoration:none;font-size:25px;" href="{% url 'approve-request' i.id  %}">&#10004;</a></td>
                 </tr>

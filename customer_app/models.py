@@ -18,6 +18,7 @@ class Request(BaseModel):
     stat=(('Pending','Pending'),('Approved','Approved'),('Repairing','Repairing'),('Repairing Done','Repairing Done'),('Released','Released'))
     status=models.CharField(max_length=50,choices=stat,default='Pending',null=True)
     bill_status = models.IntegerField(default=0,null=True)
+    location = models.CharField(max_length=50,null=True)
 
 class Feedback(BaseModel):
     user=models.ForeignKey(User,on_delete=models.CASCADE,null=True)

@@ -92,6 +92,11 @@ def customer_enquiry(request):
     return render(request,'admintemp/customer_enquiry.html',{'data':data})
 
 @login_required(login_url='sign-in')
+def Workers_report(request):
+    data = Request.objects.all().order_by('-id')
+    return render(request,'admintemp/workers_report.html',{'data':data})
+
+@login_required(login_url='sign-in')
 def approve_request(request,pk):
     if request.method=='POST':
         form=AdminApproveRequestForm(request.POST)

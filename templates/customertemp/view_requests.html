@@ -14,6 +14,7 @@
                     <th scope="col">Vehicle Model</th>
                     <th scope="col">Vehicle Brand</th>
                     <th scope="col">Issues</th>
+                    <th scope="col">Mechanic</th>
                     <th>Enquiry Date</th>
                     <th>Status</th>   
                     <th>Delete Enquiry</th>
@@ -29,6 +30,7 @@
                     <td>{{enq.vehicle_model}}</td>
                     <td>{{enq.vehicle_brand}}</td>
                     <td>{{enq.problem_description}}</td>
+                    <td>{{enq.mechanic}}</td>
                     <td>{{enq.date}}</td>
                     <td>{{enq.status}}</td>
                     <td><a style="color:blue; text-decoration:none;font-size:25px;"href="{% url 'delete-request' enq.id  %}">&#10008;</a></td>

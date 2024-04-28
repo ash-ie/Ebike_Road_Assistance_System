@@ -7,5 +7,5 @@ urlpatterns = [
     path('update-work-status/<int:pk>/',views.update_work_status,name='update-work-status'),
     path('profile/',views.profile_view,name='profile'),
     path('edit-profile/',views.update_profile,name='edit-profile'),
-    path('feedbacks/',views.view_feedback_worker,name='feedbacks'),
+    path('feedbacks_wo/',views.view_feedback_worker,name='feedbacks_wo'),
 ]

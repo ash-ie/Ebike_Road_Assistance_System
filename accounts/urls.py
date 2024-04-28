@@ -11,6 +11,7 @@ urlpatterns = [
     path('workers-admin/', views.worker_view_admin, name='workers-admin'),
     path('customers/', views.customer_view, name='customers'),
     path('customer-enquiry/',views.customer_enquiry,name='customer-enquiry'),
+    path('worker-report/',views.Workers_report,name='worker-report'),
     path('approve-request/<int:pk>/',views.approve_request,name='approve-request'),
     path('customer-invoice/',views.customer_invoice,name='customer-invoice'),
     path('feedback-admin/',views.view_feedback_admin,name='feedback-admin'),
